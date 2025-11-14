@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "8246eb40-c910-4d31-b90e-f8bbac949b3c",
+		"name": "Minesweeper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14724147",
+		"_collection_link": "https://cloudy-desert-884380.postman.co/workspace/SHIP~d556d89b-f740-43c5-828d-504d11348e0f/collection/14724147-8246eb40-c910-4d31-b90e-f8bbac949b3c?action=share&source=collection_link&creator=14724147"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/get_game_state",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get_game_state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"difficulty\": \"medium\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/new_game",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"new_game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flag Cell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"row\": 0,\r\n    \"col\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/flag_cell",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"flag_cell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reveal Cell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"row\": 0,\r\n    \"col\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/reveal_cell",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"reveal_cell"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
